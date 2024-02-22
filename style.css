@@ -1,0 +1,125 @@
+:root{
+--Tomato: hsl(4, 100%, 67%);
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--Charcoal-Grey);
+    background-color: var(--Charcoal-Grey);
+}
+p{
+    line-height: 1.5rem;
+}
+
+/*MAIN CONTAINER FORM*/
+
+#main-container{
+    background-color: white;
+}
+.main-container-text{
+  padding-left: 6%;
+}
+#main-container h1{
+    font-size: 2.5rem;
+    margin: 10% 0 5% 0;
+}
+#main-container ul{
+    list-style-type: none;
+    margin: 7% 0 10% 0;
+}
+#main-container li{
+    padding: 5% 0;
+}
+#main-container .list-icon{
+    margin-right: 1rem;
+}
+#main-container h2{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+#main-container input{
+    width: 95%;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: lightgray;
+    color: lightgray;
+    font-size: 18px;
+}
+#main-container input:hover{
+    border-color: var(--Grey);
+    cursor: pointer;
+}
+button{
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--Dark-Slate-Grey);
+    font-size: 17px;
+    border: none;
+}
+#main-container button{
+    margin: 7% 0 10% 0;
+    width: 95%;
+}
+#main-container button:hover{
+    background-image: linear-gradient(90deg, rgba(218,64,117,1) 0%, rgba(255,98,87,1));
+    cursor: pointer;
+}
+#main-container .desktop-image img{
+    display: none;
+}
+
+ /*SUCCES CINTAINER*/
+#succes-container{
+    background-color: white;
+    height: 100vh;
+    padding: 5%;
+    display: none;
+}
+#succes-container #succes-icon{
+    margin: 50% 0 15% 0;
+}
+#succes-container h1{
+    font-size: 2.75rem;
+    margin-bottom: 10%;
+}
+#succes-container span{
+    font-weight: bold;
+} 
+#succes-container button{
+    width: 100%;
+    margin: 80% 0;
+}
+
+@media(min-width: 400px){
+    body{
+        height: 100vh;
+    }
+    /*MAIN CONTAINER*/
+
+    #main-container #mobile-img{
+        display: none;
+    }
+    #main-container .desktop-image img{
+        display: block;
+    }
+    #main-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 900px;
+        max-height: 700px;
+        border-radius: 10px;
+    }
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
