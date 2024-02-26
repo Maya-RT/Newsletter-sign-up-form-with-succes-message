@@ -19,6 +19,18 @@ body{
 p{
     line-height: 1.5rem;
 }
+button{
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--Dark-Slate-Grey);
+    font-size: 17px;
+    border: none;
+}
+button:hover{
+    background-image: linear-gradient(90deg, rgba(218,64,117,1) 0%, rgba(255,98,87,1));
+    cursor: pointer;
+}
 
 /*MAIN CONTAINER FORM*/
 
@@ -32,15 +44,20 @@ p{
     font-size: 2.5rem;
     margin: 10% 0 5% 0;
 }
-#main-container ul{
-    list-style-type: none;
+#main-container .check-list{
+    display: flex;
     margin: 7% 0 10% 0;
-}
-#main-container li{
     padding: 5% 0;
 }
 #main-container .list-icon{
-    margin-right: 1rem;
+    margin-right: 2rem;    
+}
+#main-container small{
+    color: var(--Tomato);
+    font-weight: bold;
+    position: absolute;
+    left: 60%;
+    display: none;
 }
 #main-container h2{
     font-size: 15px;
@@ -51,31 +68,29 @@ p{
     padding: 20px;
     border-radius: 10px;
     border-color: lightgray;
-    color: lightgray;
     font-size: 18px;
 }
 #main-container input:hover{
     border-color: var(--Grey);
     cursor: pointer;
 }
-button{
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    background-color: var(--Dark-Slate-Grey);
-    font-size: 17px;
-    border: none;
+#main-container ::placeholder{
+    color: lightgray;
+    opacity: 1;
 }
 #main-container button{
     margin: 7% 0 10% 0;
     width: 95%;
 }
-#main-container button:hover{
-    background-image: linear-gradient(90deg, rgba(218,64,117,1) 0%, rgba(255,98,87,1));
-    cursor: pointer;
-}
 #main-container .desktop-image img{
     display: none;
+}
+.main-container-text.error input{
+    background-color: rgb(250, 224, 224);
+   border-color: blue;
+}
+.main-container-text.error ::placeholder{
+    color: red;
 }
 
  /*SUCCES CINTAINER*/
@@ -100,9 +115,16 @@ button{
     margin: 80% 0;
 }
 
-@media(min-width: 400px){
+@media(min-width: 500px){
     body{
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        padding: 16px;
     }
     /*MAIN CONTAINER*/
 
@@ -114,11 +136,44 @@ button{
     }
     #main-container{
         display: flex;
-        align-items: center;
-        justify-content: center;
         max-width: 900px;
         max-height: 700px;
-        border-radius: 10px;
+        border-radius: 25px;
+    }
+    #main-container .desktop-image{
+        margin: 2%;
+    }
+    #main-container h1{
+        font-size: 3.5rem;
+        margin: 20% 0 7% 0;
+    }
+    #main-container .check-list{
+        margin: 5% 0;
+        padding: 0;
+    }
+    #main-container small{
+        left: 43%;
+    }
+    #main-container input{
+        padding: 15px;
+    }
+    /*SUCCES CONATINER*/
+    #succes-container{
+        max-height: 470px;
+        max-width: 450px;
+        padding: 45px;
+        border-radius: 20px;
+    }
+    #succes-container #succes-icon{
+        margin: 0 0 20px 0;
+    }
+    #succes-container h1{
+        font-size: 2.5rem;
+        margin-bottom: 5%;
+    }
+    #succes-container button{
+        width: 100%;
+        margin: 10% 0 0 0;
     }
 }
 .attribution { font-size: 11px; text-align: center; }
