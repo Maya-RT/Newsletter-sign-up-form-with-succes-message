@@ -32,10 +32,12 @@ button:hover{
     cursor: pointer;
 }
 
-/*MAIN CONTAINER FORM*/
+                     /*MAIN CONTAINER FORM*/
 
 #main-container{
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 .main-container-text{
   padding-left: 6%;
@@ -46,8 +48,8 @@ button:hover{
 }
 #main-container .check-list{
     display: flex;
-    margin: 7% 0 10% 0;
-    padding: 5% 0;
+    margin: 0 0 10% 0;
+    padding: 3% 0;
 }
 #main-container .list-icon{
     margin-right: 2rem;    
@@ -63,11 +65,11 @@ button:hover{
     font-size: 15px;
     margin-bottom: 10px;
 }
-#main-container input{
+#main-container .main-container-text input{
     width: 95%;
     padding: 20px;
     border-radius: 10px;
-    border-color: lightgray;
+    border-color: lightgrey;
     font-size: 18px;
 }
 #main-container input:hover{
@@ -85,15 +87,15 @@ button:hover{
 #main-container .desktop-image img{
     display: none;
 }
-.main-container-text.error input{
+#main-container .main-container-text.error input{
     background-color: rgb(250, 224, 224);
-   border-color: blue;
+    border-color: var(--Tomato);
 }
-.main-container-text.error ::placeholder{
-    color: red;
+#main-container .main-container-text.error ::placeholder{
+    color: var(--Tomato);
 }
 
- /*SUCCES CINTAINER*/
+                  /*SUCCES CINTAINER*/
 #succes-container{
     background-color: white;
     height: 100vh;
@@ -136,6 +138,7 @@ button:hover{
     }
     #main-container{
         display: flex;
+        flex-direction: row;
         max-width: 900px;
         max-height: 700px;
         border-radius: 25px;
